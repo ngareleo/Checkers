@@ -473,7 +473,7 @@ class Position:
         self.piece = None
 
     def promote_piece(self):
-        if self.has_piece and self.piece and self.piece_is_king():
+        if self.has_piece and self.piece and not self.piece_is_king():
             self.piece.promoted()
 
     def piece_is_king(self):
